@@ -1,0 +1,187 @@
+.filter {
+   margin: 0 auto;
+}
+.filter__form {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   width: 1017px;
+   height: 48px;
+   margin: 0 auto;
+   padding-right: 19px;
+
+   background: #fdf8f8;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px -4px 4px rgba(0, 0, 0, 0.1), 4px 0px 4px rgba(0, 0, 0, 0.1),
+      -4px 0px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+}
+.filter__form-title {
+   margin-left: 19px;
+   padding-left: 10px;
+   font-family: "Segoe UI" sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 22px;
+   line-height: 29px;
+
+   box-sizing: border-box;
+
+   color: #000000;
+   border-left: 3px solid #c08cc4;
+}
+.filter__form-select {
+   position: relative;
+   width: 214px;
+   height: 32px;
+
+   cursor: pointer;
+
+   background-color: #ffffff;
+   border: 2px solid #979597;
+   box-sizing: border-box;
+   border-radius: 5px;
+   background: url(./img/arrow-up.svg) no-repeat 97% 20%, url(./img/arrow-down.svg) no-repeat 97% 80%;
+}
+.filter__form-select p {
+   padding-left: 33px;
+   font-family: "Segoe UI" sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 24px;
+
+   color: #787878;
+}
+.filter__form-select-sizes {
+   position: absolute;
+   top: -2px;
+   left: -2px;
+   width: 214px;
+
+   background: #f8f5f5;
+   border: 1px solid #bfbbbb;
+   box-sizing: border-box;
+   border-radius: 5px;
+   z-index: 101;
+
+   font-family: "Segoe UI" sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 24px;
+   text-align: center;
+   color: #787878;
+
+   display: none;
+}
+.filter__form-select-sizes--show {
+   display: block;
+}
+.filter__form-select-sizes input {
+   appearance: none;
+}
+.filter__form-select-sizes input:checked + label {
+   background: #c08cc4;
+}
+.select__item {
+   display: flex;
+}
+.select__item label {
+   width: 100%;
+   height: 28px;
+   margin-bottom: 2px;
+}
+.select__item:checked {
+}
+.filter__form-select select:focus {
+   outline: none;
+}
+.filter__form-checkbox input {
+   appearance: none;
+}
+.filter__form-checkbox-label {
+   padding-left: 39px;
+   font-family: "Segoe UI" sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 24px;
+   color: #000000;
+   
+   cursor: pointer;
+   position: relative;
+}
+.filter__form-checkbox-label::before {
+   content: "";
+   position: absolute;
+   width: 29px;
+   height: 29px;
+   left: 0px;
+   top: 0px;
+
+   /*background: #ffffff;*/
+   border: 2px solid #c08cc4;
+   border-radius: 5px;
+}
+.filter__form-checkbox input:checked + .filter__form-checkbox-label::before {
+   background: url(./img/checksvg.svg) no-repeat 50% 50%;
+}
+
+.filter__form-btn {
+   width: 132px;
+   height: 32px;
+   background-color: #c08cc4;
+   border: none;
+   border-radius: 5px;
+
+   font-family: "Segoe UI" sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 24px;
+   color: #ffffff;
+
+   cursor: pointer;
+}
+.filter__form-btn + .filter__form-btn {
+   margin-left: 20px;
+}
+.filter__form-btn:focus,
+.filter__form-btn:hover {
+   background-color: #5f2b53;
+}
+.filter__form-btn:focus {
+    outline: none;
+}
+.filter__form-button {
+}
+
+
+@media only screen and (max-width: 1200px) {
+   .filter__form {
+      width: 100%;
+   }
+}
+@media only screen and (max-width: 992px) {
+   .filter__form {
+      flex-direction: column;
+      height: 136px;
+      padding: 10px;
+   }
+   .filter__form-title {
+      display: none;
+   }
+   .filter__form-buttons {
+
+}
+}
+@media only screen and (max-width: 340px) {
+   .filter__form-btn + .filter__form-btn {
+      margin-left: 10px;
+   }
+   .filter__form-btn {
+      width: 100px;
+      font-size: 14px;
+   }
+}

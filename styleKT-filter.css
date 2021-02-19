@@ -41,9 +41,13 @@
    border: 2px solid #979597;
    box-sizing: border-box;
    border-radius: 5px;
-   background: url(./img/arrow-up.svg) no-repeat 97% 20%, url(./img/arrow-down.svg) no-repeat 97% 80%;
+   background: url(./img/arrow-down.svg) no-repeat 97% 50%;
+   background-size: 7%;
 }
-.filter__form-select p {
+.filter__form-select {
+   outline: none;
+}
+.form-select {
    padding-left: 33px;
    font-family: "Segoe UI" sans-serif;
    font-style: normal;
@@ -75,6 +79,7 @@
 
    display: none;
 }
+
 .filter__form-select-sizes--show {
    display: block;
 }
@@ -82,10 +87,25 @@
    appearance: none;
 }
 .filter__form-select-sizes input:checked + label {
-   background: #c08cc4;
+   background: url(./img/selects-check.svg) no-repeat 95% 50%;
+   background-color: #c08cc4;
 }
 .select__item {
    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.select__item--title {
+   background: url(./img/arrow-up.svg) no-repeat 97% 50%;
+   background-size: 7%;
+}
+.select-change {
+   margin-bottom: 2px;
+   padding: 2px;
+   width: 177px;
+   text-align: center;
+   border-bottom: 1px solid #787878;
+   
 }
 .select__item label {
    width: 100%;
@@ -108,7 +128,7 @@
    font-size: 18px;
    line-height: 24px;
    color: #000000;
-   
+
    cursor: pointer;
    position: relative;
 }
@@ -152,11 +172,10 @@
    background-color: #5f2b53;
 }
 .filter__form-btn:focus {
-    outline: none;
+   outline: none;
 }
 .filter__form-button {
 }
-
 
 @media only screen and (max-width: 1200px) {
    .filter__form {
@@ -173,8 +192,7 @@
       display: none;
    }
    .filter__form-buttons {
-
-}
+   }
 }
 @media only screen and (max-width: 340px) {
    .filter__form-btn + .filter__form-btn {

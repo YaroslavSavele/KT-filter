@@ -48,13 +48,13 @@
    outline: none;
 }
 .form-select {
-   padding-left: 33px;
+   /*padding-left: 33px;*/
    font-family: "Segoe UI" sans-serif;
    font-style: normal;
    font-weight: normal;
    font-size: 18px;
    line-height: 24px;
-
+   text-align: center;
    color: #787878;
 }
 .filter__form-select-sizes {

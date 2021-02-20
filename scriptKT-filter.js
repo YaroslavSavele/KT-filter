@@ -3,6 +3,18 @@ const selectList = document.querySelector('.filter__form-select-sizes');
 const resetSelect = document.querySelector('.reset-select');
 const checks = document.querySelectorAll('.select__item input');
 const change = document.querySelector('.select-change');
+const titleSelect = document.querySelector('.form-select');
+
+function writeSize () {
+   let checkboxs = select.getElementsByTagName('input');
+   let out = [];
+   for (item of checkboxs) {
+      if (item.checked) {
+         out.push(item.value);
+      }
+   }
+   titleSelect.innerHTML = out.join(', ');
+}
 
 select.addEventListener('focusin', function() {
    selectList.classList.add('filter__form-select-sizes--show');
@@ -14,23 +26,14 @@ select.addEventListener('click', function() {
 change.addEventListener('click', function(event) {
    event.stopPropagation();
    selectList.classList.toggle('filter__form-select-sizes--show');
+   
 });
 
 selectList.addEventListener('focusout', function () {
    selectList.classList.remove('filter__form-select-sizes--show');
+   writeSize();
 });
-   let out = '';
-   checks.forEach(function (check) {
-      check.addEventListener('change', function () {
-         //if (check.cheked) {
-         ////out += this.value + ', ';
-         //console.log(check.value);
-      //}
-      })
-      //document.querySelector('.filter__form-select p').innerHTML = out;
-      
-      //
-   })
+   
 
 
 resetSelect.addEventListener('click', function(e) {
@@ -41,4 +44,5 @@ resetSelect.addEventListener('click', function(e) {
       check.checked = false;
       
    })
+   titleSelect.innerHTML = 'Выбрать размер';
 });
